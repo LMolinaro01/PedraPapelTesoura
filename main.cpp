@@ -9,7 +9,7 @@ int playerchoice, num, retry, aprovado, playerresp;
 
 void cpuchoice(); int Volta_Tudo(); void pchoice();
 
-void delay(int milliseconds) //função para ter um timer entre os códigos
+void delay(int milliseconds) //funÃ§Ã£o para ter um timer entre os cÃ³digos
 {
     clock_t start_time = clock();
     
@@ -22,7 +22,7 @@ int main()
 	
 	retry = 2;
 	
-	cout << "--------------- Bem Vindo ao Pedra Papel e Tesoura ---------------\n\n";
+	cout << "--------------- Pedra x Papel x Tesoura ---------------\n\n";
 	
 	while (retry = 2)
 	{
@@ -31,36 +31,36 @@ int main()
 	
 	cpuchoice(); //escolha da cpu
 	
-	delay(1000);
+	delay(2000);
 	
 	if (playerchoice == 1 && num == 1)  //jogador usa pedra e cpu usa papel
 	{
-		cout << "\n\n-É.. Você Perdeu" << endl;
+		cout << "\n\n-Ã‰.. VocÃª Perdeu" << endl;
 	}
 	
 	else if (playerchoice == 1 && num == 2) //jogador usa pedra cpu tesoura
 	{
-		cout << "\n\n-Parabéns! Você Ganhou!!!!" << endl;
+		cout << "\n\n-ParabÃ©ns! VocÃª Ganhou!!!!" << endl;
 	}
 	
 	else if (playerchoice == 2 && num == 0) //player usa papel e cpu usa pedra
 	{
-		cout << "\n\n-Aeeeeee Você ganhou!" << endl;
+		cout << "\n\n-Aeeeeee VocÃª ganhou!" << endl;
 	}
 	
 	else if (playerchoice == 2 && num == 2) //player usa papel e cpu usa tesoura
 	{
-		cout << "\n\n-Você Perdeu, não foi dessa vez..." << endl;
+		cout << "\n\n-VocÃª Perdeu, nÃ£o foi dessa vez..." << endl;
 	}
 	
 	else if (playerchoice == 3 && num == 0) //player usa tesoura e cpu usa pedra
 	{
-		cout << "\n\n-Você Perdeu." << endl;
+		cout << "\n\n-VocÃª Perdeu." << endl;
 	}
 	
 	else if (playerchoice == 3 && num == 1) //player usa tesoura e cpu usa papel
 	{
-		cout << "\n\n-Boa! Você Ganhou" << endl;
+		cout << "\n\n-Boa! VocÃª Ganhou" << endl;
 	}
 	
 	else 
@@ -70,12 +70,16 @@ int main()
 	
 	aprovado = 1;
 	
+	delay(1000);
+	
 	while (aprovado >= 1)
 {
 	
-	cout << "\n-Deseja tentar novamente? (1 = Sim) (2 = Não)" << endl << endl << "-> Resposta: ";
+	cout << "\n|Deseja tentar novamente? (1 = Sim) (2 = NÃ£o)" << endl << endl << "-> Resposta: ";
 		
 	cin >> retry;
+	
+	delay(1100);
 	
 	cout << endl;
 		
@@ -95,7 +99,7 @@ int main()
 	
 	else
 	{
-		cout << "-Opção inválida.\n";
+		cout << "-OpÃ§Ã£o invÃ¡lida.\n";
 		
 		aprovado = 1;
 	}
@@ -114,7 +118,7 @@ void pchoice()
 	while (playerresp == 1)
 {
 	
-	cout << "-Escolha um desses daí:\n \n 1) Pedra\n 2) Papel\n 3) Tesoura\n";
+	cout << "-FaÃ§a sua Escolha:\n \n|Pedra-(1)\n|Papel-(2)\n|Tesoura-(3)\n";
 	
 	cout << "\n-> Resposta: ";
 	
@@ -122,7 +126,7 @@ void pchoice()
 	
 	if (playerchoice != 1 && playerchoice != 2 && playerchoice != 3)
 	{
-		cout << "\n-Opção Inválida, Tente novamente...\n\n";
+		cout << "\n-OpÃ§Ã£o InvÃ¡lida, Tente novamente...\n\n";
 	}
 	
 	else
@@ -130,23 +134,23 @@ void pchoice()
 		break;
 	}
 }
-	cout << "\n(O Computador Está Escolhendo, Aguarde . . .)" << endl;
+	cout << "\n(CPU EstÃ¡ Escolhendo, Aguarde . . .)" << endl;
 	
-	delay(1000); //vai botar um timer de 1000 Milissegundos antes do proximo código ser exibido
+	delay(2000); //vai botar um timer de 1000 Milissegundos antes do proximo cÃ³digo ser exibido
 
 	switch (playerchoice)
 	{
 		case 1:
-			cout << "\n-Você escolheu Pedra e ";
+			cout << "\n|Player: (Pedra)   |";
 			break;
 		case 2:
-			cout << "\n-Você escolheu Papel e ";
+			cout << "\n|Player:  (Papel)   |";
 			break;
 		case 3:
-			cout << "\n-Você escolheu Tesoura e ";
+			cout << "\n|Player: (Tesoura)   |";
 			break;
 		default:
-			cout << "\nOpção inválida";
+			cout << "\nOpÃ§Ã£o invÃ¡lida";
 			exit(1);
 	}
 	
@@ -165,17 +169,17 @@ void cpuchoice()
 	
 	if(num == 0) 
 	{
-		cout << "o Computador escolheu Pedra";
+		cout << "CPU: (Pedra)";
 	}
 	
 	if(num == 1)
 	{
-		cout << "o Computador escolheu Papel";
+		cout << "CPU: (Papel)";
 	}
 
 	if (num == 2)
 	{
-		cout << "o Computador escolheu Tesoura";
+		cout << "CPU: (Tesoura)";
 	}
 
 }
