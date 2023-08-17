@@ -1,2 +1,2 @@
 # PedraPapelTesoura
-Fiz um Pedra Papel e Tesoura contra a CPU em C++
+Pedra x Papel x Tesoura em C++ (Player Vs CPU)
